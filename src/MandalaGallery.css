@@ -1,0 +1,86 @@
+.mandala-gallery {
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.mandala-gallery-card {
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    background: linear-gradient(135deg,
+            rgb(225, 220, 220),
+            rgb(235, 230, 235));
+    flex: 0 0 auto;
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05),
+        2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+}
+
+.mandala-gallery-card:hover {
+    transform: scale(1.01);
+    box-shadow: -4px -4px 5px rgba(0, 0, 0, 0.1),
+        4px 4px 5px rgba(0, 0, 0, 0.1),
+        inset 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+.mandala-gallery-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    padding: 3px;
+    border-radius: 10px;
+    background: rgba(230, 230, 230, 0.5);
+    backdrop-filter: blur(2px);
+
+    text-align: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2),
+        5px 5px 5px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mandala-gallery-controls-text {
+    padding-left: 10px;
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.mandala-gallery-button {
+    border: transparent 0px;
+    background: rgb(230, 230, 230);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    transition: 0.5s;
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.2),
+        5px 5px 5px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mandala-gallery-button:hover {
+    color: darkorange;
+    transform: scale(1.1);
+    box-shadow:
+        -7px -7px 5px rgba(255, 255, 255, 0.2),
+        7px 7px 5px rgba(0, 0, 0, 0.1),
+        inset -7px -7px 5px rgba(255, 255, 255, 0.2),
+        inset 7px 7px 5px rgba(0, 0, 0, 0.1);
+}

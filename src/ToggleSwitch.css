@@ -1,0 +1,85 @@
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow:
+        -5px -5px 5px rgba(255, 255, 255, 0.2),
+        5px 5px 5px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+}
+
+.toggle-switch-label {
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: grey;
+}
+
+.toggle-switch:hover {
+    transform: scale(1.01);
+    box-shadow:
+        -7px -7px 5px rgba(255, 255, 255, 0.4),
+        7px 7px 5px rgba(0, 0, 0, 0.2),
+        inset -10px -10px 5px rgba(255, 255, 255, 0.4),
+        inset 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.toggle-switch:hover .toggle-switch-label{
+    color: darkorange;
+}
+
+.toggle-switch-slider-container {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow:
+        0px 0px 10px rgba(255, 255, 255, 0.5),
+        inset 0px 0px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch-slider {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: linear-gradient(135deg, rgb(210, 210, 210), rgb(240, 230, 230));
+    border-radius: 50%;
+    transition: .4s;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5),
+        inset 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.toggle-switch-slider::before {
+    content: "";
+    border: solid darkorange 1.5px;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    bottom: 10%;
+    right: 10%;
+    transition: .4s;
+}
+
+input:checked+.toggle-switch-slider-container {
+    background: linear-gradient(135deg, red, darkorange);
+}
+
+input:checked+.toggle-switch-slider-container .toggle-switch-slider {
+    transform: translateX(26px);
+}
